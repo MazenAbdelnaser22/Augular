@@ -1,0 +1,23 @@
+<p class="pt-5 mt-5">parent works!</p>
+
+<!-- <h1 class="text-center" *ngFor="let item of arr">
+  {{ item }}
+</h1> -->
+<div class="container">
+  <div class="container">
+  
+    <div  class="row ">
+      <div class="col-4"  *ngFor="let Post of Posts">
+        <div class="card " style="width: 18rem;">
+          <!-- <img src="..." class="card-img-top" alt="..."> -->
+          <div class="card-body" >
+            <h5 class="card-title">{{ Post.title }}</h5>
+            <p class="card-text">{{ Post.body }}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div></div>
+<app-child [valuefromParent]="test" (sendDataToParent)="display($event)"></app-child>
